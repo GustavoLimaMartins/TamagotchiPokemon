@@ -130,7 +130,7 @@ namespace TamagotchiPokemon.Views
                         Console.Clear();
                         Console.WriteLine($"Lista de Pokemon(s) Capturado(s) - Quantidade ({NomeDoPokemon.Count}):");
                         VerPokemonCapturados();
-                        Console.WriteLine("\nDigite qualquer tecla para retornar...");
+                        Console.WriteLine("\nAperte qualquer tecla para retornar...");
                         Console.ReadKey();
                         opcao = MenuPrincipal();
                         break;
@@ -138,7 +138,7 @@ namespace TamagotchiPokemon.Views
                         Console.Clear();
                         Console.WriteLine("Conhecendo mais sobre o Pokemon...");
                         PesquisarPokemon().Wait();
-                        Console.WriteLine("\nDigite qualquer tecla para retornar...");
+                        Console.WriteLine("\nAperte qualquer tecla para retornar...");
                         Console.ReadKey();
                         opcao = MenuPrincipal();
                         break;
@@ -148,7 +148,7 @@ namespace TamagotchiPokemon.Views
                         if (NomeDoPokemon.Count == 0)
                         {
                             Console.WriteLine("Nenhum Pokemon capturado, volte ao menu principal e capture um Pokemon!");
-                            Console.WriteLine("\nDigite qualquer tecla para retornar ao menu principal...");
+                            Console.WriteLine("\nAperte qualquer tecla para retornar ao menu principal...");
                             Console.ReadKey();
                             opcao = MenuPrincipal();
                             break;
@@ -176,7 +176,7 @@ namespace TamagotchiPokemon.Views
                             default:
                                 break;
                         }
-                        Console.WriteLine("\nDigite qualquer tecla para retornar ao menu principal...");
+                        Console.WriteLine("\nAperte qualquer tecla para retornar ao menu principal...");
                         Console.ReadKey();
                         opcao = MenuPrincipal();
                         break;
@@ -251,7 +251,7 @@ namespace TamagotchiPokemon.Views
                     Estado = new EstadoDoPokemon(i, mascote.Req[i].NomePokemon[i].ToString().ToUpper());
                 }
             }
-            Console.WriteLine("\nDigite qualquer tecla para retornar...");
+            Console.WriteLine("\nAperte qualquer tecla para retornar...");
             Console.ReadKey();
             return req.ToString();
         }
