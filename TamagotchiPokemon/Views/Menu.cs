@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Text;
+using System.Text.Json;
 using TamagotchiPokemon.API;
 using TamagotchiPokemon.Interfaces;
 using TamagotchiPokemon.Modelos;
@@ -34,6 +35,9 @@ namespace TamagotchiPokemon.Views
         {
             Console.Clear();
             Console.WriteLine("###### Menu ######");
+            string art = File.ReadAllText("C:\\Users\\Gustavo Lima\\Desktop\\Alura\\C#\\TamagotchiPokemon\\TamagotchiPokemon\\pikachu.txt", Encoding.UTF8);
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.WriteLine(art);
             Console.WriteLine("Digite (1) para 'Capturar Pokemon'");
             Console.WriteLine("Digite (2) para 'Ver Pokemon capturados'");
             Console.WriteLine("Digite (3) para 'Conhecer mais sobre um Pokemon'");
@@ -228,6 +232,9 @@ namespace TamagotchiPokemon.Views
             foreach (var item in req.IndexEncontrado)
             {
                 Console.Clear();
+                string art = File.ReadAllText("C:\\Users\\Gustavo Lima\\Desktop\\Alura\\C#\\TamagotchiPokemon\\TamagotchiPokemon\\bolaPok.txt", Encoding.UTF8);
+                Console.OutputEncoding = Encoding.UTF8;
+                Console.WriteLine(art);
                 Console.WriteLine("Dados do Pokemon capturado:\n");
                 Mascote mascote = new Mascote(item);
                 await mascote.SalvarDadosPokemon(subReq, req);
